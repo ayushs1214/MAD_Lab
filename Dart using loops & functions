@@ -1,0 +1,33 @@
+// To study and implement basic Dart programs using loops and functions.
+
+// Function to calculate the factorial of a number
+int factorial(int n) {
+  int result = 1;
+  for (int i = 1; i <= n; i++) {
+    result *= i;
+  }
+  return result;
+}
+
+// Function to print the Fibonacci series up to a given limit
+void printFibonacci(int limit) {
+  int prev = 0;
+  int curr = 1;
+  print('Fibonacci Series up to $limit:');
+  while (prev <= limit) {
+    print(prev);
+    int temp = prev + curr;
+    prev = curr;
+    curr = temp;
+  }
+}
+
+void main() {
+  // Calling factorial function
+  int number = 5;
+  print('Factorial of $number is: ${factorial(number)}');
+
+  // Calling printFibonacci function
+  int limit = 50;
+  printFibonacci(limit);
+}
